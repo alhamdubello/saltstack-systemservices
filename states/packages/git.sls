@@ -16,4 +16,11 @@ setup_git_configs_email:
     - name: user.email
     - value: alhamdubello@gmail.com
     - repo: /srv/salt
-#install_tools:
+
+install_sysadmin_tools:
+  pkg:
+   - installed
+   - pkgs:
+      - bash-completion
+      - lsof
+      - rsync
