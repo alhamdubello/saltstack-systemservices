@@ -1,3 +1,4 @@
 base:
-  'node1':
+  'N@webservers':
+    - packages.fail2ban
     - services.stockcheck
