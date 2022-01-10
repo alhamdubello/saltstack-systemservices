@@ -1,0 +1,25 @@
+{% set mysql_server = salt['grains.filter_by']({
+
+'Debian': {
+'package': 'mysql-server',
+'service': 'mysql',
+'config_files': 'packages/mysql/files/ubuntu/.mycnf',
+},
+'RedHat': {
+'package': 'mysql-server',
+'service': 'mysqld',
+'config_files': 'packages/mysql/files/redhat/.mycnf',
+},
+
+})%}
+
+{% set mysql_client = salt['grains.filter_by']({
+
+'Debian': {
+'package': 'mysql-client',
+},
+'RedHat': {
+'package': 'mysql',
+},
+
+})%}

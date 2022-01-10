@@ -1,3 +1,6 @@
 base:
-  r1:
-    - r1
+  'srv001.home.local':
+     - packages.users
+     - packages.web
+     - data
+     - mysql.username
