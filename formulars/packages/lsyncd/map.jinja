@@ -1,0 +1,12 @@
+{% set lsyncd = salt['grains.filter_by']({
+  'RedHat': {
+     'package': ['lsyncd'],
+     'service': 'lsyncd',
+     'config_file': '/etc/lsyncd.conf',
+   },
+  'Debian': {
+    'package': [''],
+    'service': '',
+    'config_file': '',
+   },
+})%}
